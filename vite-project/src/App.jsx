@@ -5,7 +5,7 @@ import "./App.css";
 const App = () => {
   return (
     <div className="bg-gray-300 h-screen w-full">
-      <h1 className="text-3xl h-screen w-full font-bold underline">
+      <h1 className="text-3xl flex flex-row justify-center align-center h-screen w-full font-bold underline">
         Hello world! car
       </h1>
     </div>
