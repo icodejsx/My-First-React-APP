@@ -1,1 +1,7 @@
 so jsx is like wrting html / or enable one to write html code in react where by with the help of curly braces { } you can also be able to wite javascript inside of it.
+
+today on react have learnt jsx , Rendering list, conditional Rendering, Handling Events , Updating state
+
+props incudes data that we give to a component whereas
+
+state includes a data that is local or private to that component. other compont can not access it its complectly internal for that component
