@@ -9,6 +9,7 @@ const Counter = (props) => {
   const helper = () => {
     handleIncrement({ id: 1 });
   };
+  const { value, id, onDelete } = props;
 
   return (
     <div>
@@ -22,7 +23,7 @@ const Counter = (props) => {
         Increment
       </button>
       <button
-        onClick={() => props.onDelete(props.id)}
+        onClick={() => props.onDelete(id)}
         className="btn btn-danger btn-sm m-2"
       >
         Delete
