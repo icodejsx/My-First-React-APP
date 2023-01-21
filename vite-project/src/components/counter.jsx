@@ -18,9 +18,9 @@ const Counter = (props) => {
       </span>
       <button
         onClick={(pro) => helper(pro)}
-        className=" hover:bg-blue-600 text-black-200 font-medium py-2 px-4 rounded shadow-md"
+        className=" hover:bg-blue-600 text-black-200 font-medium py- 2 px-4 rounded shadow-md"
       >
-        Increment
+        Increments
       </button>
       <button
         onClick={() => props.onDelete(id)}
