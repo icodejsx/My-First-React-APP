@@ -8,6 +8,7 @@ function Counters() {
     { id: 3, value: 0 },
     { id: 4, value: 0 },
   ]);
+  co;
 
   const handleDelete = (counterId) => {
     console.log("delete handler", counterId);
