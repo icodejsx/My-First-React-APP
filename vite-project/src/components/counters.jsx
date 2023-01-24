@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Counter from "./counter";
 
 function Counters() {
-  const [Count, setcounter] = useState([
+  const [Count, setCounter] = useState([
     { id: 1, value: 4 },
     { id: 2, value: 0 },
     { id: 3, value: 0 },
@@ -10,7 +10,8 @@ function Counters() {
   ]);
 
   const handleDelete = (counterId) => {
-    console.log("delete handler", counterId);
+    const counters =  counters.filter((c) => c.id !== counterId);
+    setCounter({ counters });
   };
 
   return (
@@ -20,8 +21,11 @@ function Counters() {
           key={counter.id}
           onDelete={handleDelete}
           value={counter.value}
+          id={counter.id}
         />
-      ))}
+      ))}   
+
+      
     </div>
   );
 }
