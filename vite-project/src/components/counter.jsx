@@ -23,7 +23,7 @@ const Counter = (props) => {
         Increments
       </button>
       <button
-        onClick={() => props.onDelete(id)}
+        onClick={() => props.onDelete(props.id)}
         className="btn btn-danger btn-sm m-2"
       >
         Delete
