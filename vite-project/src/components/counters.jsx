@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Counter from "./counter";
 
 function Counters() {
-  const [Count, setCounter] = useState([
+  const [counters, setCounters] = useState([
     { id: 1, value: 4 },
     { id: 2, value: 0 },
     { id: 3, value: 0 },
@@ -10,22 +10,20 @@ function Counters() {
   ]);
 
   const handleDelete = (counterId) => {
-    const counters =  counters.filter((c) => c.id !== counterId);
-    setCounter({ counters });
+    const newCounters = counters.filter((c) => c.id !== counterId);
+    setCounters(newCounters);
   };
 
   return (
     <div>
-      {Count.map((counter) => (
+      {counters.map((counter) => (
         <Counter
           key={counter.id}
-          onDelete={handleDelete}
+          onDelete={() => handleDelete(counter.id)}
           value={counter.value}
           id={counter.id}
         />
-      ))}   
-
-      
+      ))}
     </div>
   );
 }
