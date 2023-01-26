@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 
 const Counter = (props) => {
-  let [count, setCount] = useState(props.value);
+  let [count, setCount] = useState(props.counter.value);
   const formatCount = (count) => (count === 0 ? "Zero" : count);
   const badge = () => (count === 0 ? "bg-yellow-600" : "bg-blue-600");
   const tags = ["tag1", "tag2", "tag3"];
@@ -23,7 +23,7 @@ const Counter = (props) => {
         Increments
       </button>
       <button
-        onClick={() => props.onDelete(props.id)}
+        onClick={() => props.onDelete(props.counter.id)}
         className="btn btn-danger btn-sm m-2"
       >
         Delete

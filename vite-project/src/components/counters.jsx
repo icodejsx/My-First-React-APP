@@ -14,14 +14,20 @@ function Counters() {
     setCounters(newCounters);
   };
 
+  const handleReset = () => {
+    setCounters(counters.map((c) => ({ ...c, value: 0 })));
+  };
+
   return (
     <div>
+      <button onClick={handleReset} className="btn btn-primary btn-sm m-2">
+        Reset
+      </button>
       {counters.map((counter) => (
         <Counter
           key={counter.id}
           onDelete={() => handleDelete(counter.id)}
-          value={counter.value}
-          id={counter.id}
+          counter={counter}
         />
       ))}
     </div>
